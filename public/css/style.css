@@ -1,0 +1,253 @@
+/* Reset các thuộc tính cơ bản */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Thiết lập font mặc định cho các phần tử văn bản */
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Header styles */
+.header .ship {
+  text-align: center;
+  background-color: #302e2e;
+  color: aliceblue;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.header .header-btn {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 125px;
+}
+
+.header .search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .search input {
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff; /* Optional background color */
+  color: #333; /* Optional text color */
+  
+}
+
+.header .account {
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+/* Styles for buttons and icons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 4px;
+}
+
+/* Thiết lập font cho icon riêng để tránh bị ghi đè */
+.icon, .ti-shopping-cart, .cart {
+  font-family: "Themify"; /* Sử dụng font của thư viện Themify cho các icon */
+  font-size: 20px; /* Điều chỉnh kích thước cho icon */
+  cursor: pointer;
+  color: #333;
+}
+
+.login, .register, .note {
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+  padding: 4px;
+}
+
+/* List menu styles */
+.container.list-menu .function {
+  text-align: center;
+}
+
+.container .list-menu {
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container .list-menu .function {
+  flex: 1;
+  text-align: center;
+}
+
+.container .list-menu .function a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+/* Image container */
+.img {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Main layout styles */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 16px;
+  padding: 50px;
+  margin-top: 46px;
+}
+
+/* Each main-btn item */
+.main-btn {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 8px;
+  margin: 32px;
+}
+
+.main-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Title styles */
+.titles,
+.title {
+  text-align: center;
+  background-color: #d6dff4;
+  padding: 32px;
+}
+.icon {
+  font-size: 30px;
+  padding: 16px;
+  margin-bottom: 16px;
+
+}
+.ct-btn {
+  padding: 8px;
+}
+.feedback {
+  height: 600px;
+}
+
+.img-btn .btn-n {
+  padding: 16px;
+
+}
+
+.img-btn-1 .btn-n-1{
+  padding: 16px;
+}
+.main-1{
+  display: flex;
+}
+
+.btn-n-1 {
+  display: flex;
+}
+
+.btn-n-1 .btn-2 {
+  /* padding-top: 8px; */
+}
+.btns {
+  padding-left: 32px;
+}
+
+.container.my-3 {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2.text-center {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form.order-form .form-group {
+  margin-bottom: 15px;
+}
+
+form.order-form label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+form.order-form input,
+form.order-form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form.order-form input:focus,
+form.order-form select:focus {
+  border-color: #007bff;
+}
+
+form.order-form button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form.order-form button:hover {
+  background-color: #0056b3;
+}
+
+.box{
+  padding: 16px;
+}

@@ -1,0 +1,47 @@
+extends ../../layout/default.pug
+
+block main 
+    .title
+      h1 FOR THE YOUTH
+    .main
+      each item in product
+        .main-btn
+          img(src='/img/1.webp', alt='')
+          h3
+            p #{item.title}
+          div
+            p.price-new #{item.priceNew}
+            p.discountPercentage #{item. discountPercentage}
+            p.price-old #{item.price}
+            
+          div
+            p #{item.stock}
+    .title
+      h1 BEST-SELLING ITEMS
+    .main
+      each item in [1, 2, 3, 4, 5, 6]
+        .main-btn
+          img(src='/page/img/1.webp', alt='TEN SAN PHAM')
+          h3
+            p TEN SAN PHAM #{item}
+          div
+            p Giá:
+          div
+            p Đang cập nhật
+    .titles
+      h1 FEEDBACK
+    .main
+      .main-1
+        .img-btn
+          .btn-n
+            img(src='/page/img/imgaView1.jpg', alt='Feedback 1')
+          .btn-n
+            img(src='/page/img/imgaView2.webp', alt='Feedback 2')
+        .img-btn-1
+          .btn-n-1
+            img(src='/page/img/imgaView3.webp', alt='Feedback 3')
+          .btn-n-1
+            .btn-2
+              img(src='/page/img/imgaView4.jpg', alt='Feedback 4')
+            .btn-2
+              img.btns(src='/page/img/imgaView5.webp', alt='Feedback 5')

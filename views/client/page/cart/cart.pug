@@ -1,0 +1,31 @@
+extends ../../layout/default.pug
+
+block main
+  .container.my-3
+    .row.justify-content-center
+      .col-md-6
+        h2.text-center.my-4 Đặt Hàng
+        form.order-form
+          .form-group
+            label(for="name") Họ và Tên
+            input#name.form-control(type="text", placeholder="Nhập họ và tên của bạn", required)
+          .form-group
+            label(for="email") Email
+            input#email.form-control(type="email", placeholder="Nhập email của bạn", required)
+          .form-group
+            label(for="phone") Số Điện Thoại
+            input#phone.form-control(type="tel", placeholder="Nhập số điện thoại", required)
+          .form-group
+            label(for="address") Địa Chỉ
+            input#address.form-control(type="text", placeholder="Nhập địa chỉ giao hàng", required)
+          .form-group
+            label(for="product") Sản Phẩm
+            select#product.form-control
+              option(value="iphone16") iPhone 16
+              option(value="iphone17") iPhone 17
+              option(value="iphone18") iPhone 18
+          .form-group
+            label(for="quantity") Số Lượng
+            input#quantity.form-control(type="number", min="1", value="1", required)
+          .form-group.text-center
+            button.btn.btn-primary.btn-block(type="submit") Đặt Hàng Ngay

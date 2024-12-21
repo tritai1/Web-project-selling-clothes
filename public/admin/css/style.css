@@ -1,0 +1,174 @@
+/* Header Styling */
+header.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  z-index: 200;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #e9ecef;
+}
+
+/* Logo Styling */
+.inner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.inner-logo img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inner-logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(65, 67, 194);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .inner-logo img {
+    width: 40px;
+  }
+  .inner-logo span {
+    font-size: 18px;
+  }
+}
+
+/* Slider Styling */
+.slider {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 100px);
+  background: linear-gradient(to left, #25162c, #5a1247);
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  overflow: auto;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.slider .inner-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slider .inner-menu ul li {
+  margin-bottom: 15px;
+}
+
+.slider .inner-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.slider .inner-menu ul li a:hover {
+  background-color: #495057;
+  color: #f8f9fa;
+}
+
+.slider .inner-menu ul li a.active {
+  background-color: #17a2b8;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Responsive Slider */
+@media (max-width: 768px) {
+  .slider {
+    width: 60px;
+  }
+  .slider .inner-menu ul li a {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* Main Content Styling */
+main.content {
+  margin-top: 100px;
+  margin-left: 220px;
+  padding: 20px;
+}
+
+main.content h1 {
+  font-size: 24px;
+  color: #343a40;
+  margin-top: 20px;
+}
+
+/* Responsive Main Content */
+@media (max-width: 768px) {
+  main.content {
+    margin-left: 60px;
+  }
+}
+form[form-change-multi] .form-control,
+form[form-change-multi] button {
+  height: 40px; /* Đặt chiều cao cố định giống nhau */
+  line-height: 40px; /* Đảm bảo nội dung căn giữa theo chiều dọc */
+}
+
+form[form-change-multi] button {
+  padding: 0 20px; /* Tạo khoảng cách ngang hợp lý */
+}
+
+/* Vị trí hiển thị của thông báo */
+[show-alert] {
+  position: fixed;
+  top: 70px;
+  right: 15px;
+  z-index: 9999;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Hiệu ứng trượt và mờ dần */
+}
+
+/* Hiển thị thông báo (trạng thái mặc định) */
+[show-alert].visible {
+  transform: translateX(0); /* Giữ vị trí ban đầu */
+  opacity: 1;              /* Hiển thị rõ */
+}
+
+/* Ẩn thông báo (trạng thái ẩn) */
+[show-alert].alert-hidden {
+  transform: translateX(100%); /* Trượt ra khỏi màn hình */
+  opacity: 0;                 /* Mờ dần */
+  pointer-events: none;       /* Không cho tương tác */
+}
+
+/* Nút đóng thông báo */
+[show-alert] [close-alert] {
+  background-color: #ffffffc4; /* Nền trắng trong suốt */
+  display: inline-block;       /* Khối dòng */
+  width: 24px;                 /* Chiều rộng nút */
+  height: 24px;                /* Chiều cao nút */
+  line-height: 24px;           /* Căn giữa chữ theo chiều dọc */
+  text-align: center;          /* Căn giữa chữ theo chiều ngang */
+  font-weight: 600;            /* Chữ đậm */
+  border-radius: 50%;          /* Bo tròn góc */
+  cursor: pointer;             /* Con trỏ khi hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+}
+

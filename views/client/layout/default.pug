@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="")
+        link(rel="stylesheet", href="/css/style.css")
+        title #{title}
+    body
+     
+     include ../partial/header.pug
+      h1= messages
+     block main 
+
+     include ../partial/footer.pug
+     script(src="/js/index.js") 

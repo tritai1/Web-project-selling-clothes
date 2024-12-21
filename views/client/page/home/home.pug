@@ -1,0 +1,81 @@
+extends ../../layout/default.pug
+include ../../minxin/box-head.pug
+
+block main
+  .container
+    ul.list-menu
+      li.function
+        a.fnc1(href='#') New Arrivals
+      li.function
+        a.fnc2(href='#') Best-Selling Items
+      li.function
+        a.fnc3(href='#') Flash Sale
+      li.function
+        a.fnc4(href='#') Outerwear
+      li.function
+        a.fnc5(href='#') Accessories
+    .img
+      img(src='https://theme.hstatic.net/1000344185/1001270599/14/slideshow_1.jpg?v=278', alt='Slideshow Image')
+    .main
+      .main-btn
+        div
+          i.icon.ti-wallet
+        .built
+          p.ct-btn giao hang mien phi
+        div
+          p.ct-btn v&#x1EDB;i &dstrok;&#x1A1;n h&agrave;ng t&#x1EEB; 500k tr&#x1EDF; l&ecirc;n
+      .main-btn
+        div
+          i.icon.ti-rocket
+        .built
+          p.ct-btn giao hang mien phi
+        div
+          p.ct-btn v&#x1EDB;i &dstrok;&#x1A1;n h&agrave;ng t&#x1EEB; 500k tr&#x1EDF; l&ecirc;n
+      .main-btn
+        div
+          i.icon.ti-truck
+        div
+          p.ct-btn giao hang mien phi
+        div
+          p.ct-btn v&#x1EDB;i &dstrok;&#x1A1;n h&agrave;ng t&#x1EEB; 500k tr&#x1EDF; l&ecirc;n
+    .title
+      h1 FOR THE YOUTH
+    .main
+      each product in [1, 2, 3, 4, 5, 6] 
+        .main-btn
+          img(src='/page/img/1.webp', alt='Product Image')
+          h3
+            p TEN SAN PHAM
+          div
+            p | GI&Aacute;
+          div
+            p Dang gia
+    .title
+      h1 BEST-SELLING ITEMS
+    .main
+      each product in [1, 2, 3, 4, 5, 6] 
+        .main-btn
+          img(src='/page/img/1.webp', alt='Product Image')
+          h3
+            p TEN SAN PHAM
+          div
+            p | GI&Aacute;
+          div
+            p Dang gia
+    .titles
+      h1 FEEDBACK
+    .main
+      .main-1
+        .img-btn
+          .btn-n
+            img(src='/page/img/imgaView1.jpg', alt='Feedback Image 1')
+          .btn-n
+            img(src='/page/img/imgaView2.webp', alt='Feedback Image 2')
+        .img-btn-1
+          .btn-n-1
+            img(src='/page/img/imgaView3.webp', alt='Feedback Image 3')
+          .btn-n-1
+            .btn-2
+              img(src='/page/img/imgaView4.jpg', alt='Feedback Image 4')
+            .btn-2
+              img.btns(src='/page/img/imgaView5.webp', alt='Feedback Image 5')
