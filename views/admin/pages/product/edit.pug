@@ -4,7 +4,7 @@ block main
   main.content
    +alert-error(5000)
    h1 Tạo mới sản phẩm 
-   form(action=`${variableAll}/product/edit` method="POST" enctype="multipart/form-data") 
+   form(action=`${variableAll}/product/edit/${product.id}?_method=PATCH` method="POST" enctype="multipart/form-data") 
         div.form-group
             label(for="title") Tiêu đề
             input#title(type="text" name="title" required placeholder="Nhập tiêu đề" class="form-control" value = product.title)
@@ -47,4 +47,4 @@ block main
             label(for="position") Vị trí
             input#position(type="number" name="position" min="0" placeholder="Nhập vị trí" class="form-control" value = product.position)
         div.form-group
-            button(type="submit") Tạo sản phẩm
+            button(type="submit") Cập nhật sản phẩm

@@ -6,16 +6,17 @@ block main
     .main
       each item in product
         .main-btn
-          img(src='/img/1.webp', alt='')
-          h3
-            p #{item.title}
-          div
-            p.price-new #{item.priceNew}
-            p.discountPercentage #{item. discountPercentage}
-            p.price-old #{item.price}
-            
-          div
-            p #{item.stock}
+          a(href=`/product/detail/${item.slug}`) 
+            img(src=`${item.thumbnail}`, alt='', width="60", height="60")
+            h3
+              p #{item.title}
+            div
+              p.price-new #{item.priceNew}
+              p.discountPercentage #{item. discountPercentage}
+              p.price-old #{item.price}
+              
+            div
+              p #{item.stock}
     .title
       h1 BEST-SELLING ITEMS
     .main

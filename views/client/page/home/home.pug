@@ -17,23 +17,23 @@ block main
     .img
       img(src='https://theme.hstatic.net/1000344185/1001270599/14/slideshow_1.jpg?v=278', alt='Slideshow Image')
     .main
-      .main-btn
+      .main-btns
         div
-          i.icon.ti-wallet
+          img(src="./img/wallet.png", alt="", width="40", height="40")
         .built
           p.ct-btn giao hang mien phi
         div
           p.ct-btn v&#x1EDB;i &dstrok;&#x1A1;n h&agrave;ng t&#x1EEB; 500k tr&#x1EDF; l&ecirc;n
-      .main-btn
+      .main-btns
         div
-          i.icon.ti-rocket
+          img(src="./img/delivery-truck.png", alt="", width="40", height="40")
         .built
           p.ct-btn giao hang mien phi
         div
           p.ct-btn v&#x1EDB;i &dstrok;&#x1A1;n h&agrave;ng t&#x1EEB; 500k tr&#x1EDF; l&ecirc;n
-      .main-btn
+      .main-btns
         div
-          i.icon.ti-truck
+          img(src="./img/rocket.png", alt="", width="40", height="40")
         div
           p.ct-btn giao hang mien phi
         div
@@ -41,15 +41,14 @@ block main
     .title
       h1 FOR THE YOUTH
     .main
-      each product in [1, 2, 3, 4, 5, 6] 
+      each item in product
         .main-btn
-          img(src='/page/img/1.webp', alt='Product Image')
-          h3
-            p TEN SAN PHAM
-          div
-            p | GI&Aacute;
-          div
-            p Dang gia
+          a(href=`/product/detail/${item.slug}`) 
+            img(src=`${item.thumbnail}`, alt='Product Image')
+            h3
+              p #{item.title}
+            div
+              p #{item.price}
     .title
       h1 BEST-SELLING ITEMS
     .main

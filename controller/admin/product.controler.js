@@ -2,6 +2,7 @@ const ProductPage = require("../../models/product.model");
 const searchHelper = require("../../helper/search.helper");
 const statusHelper = require("../../helper/statusFillter.helper")
 const path = require('../../config/system');
+const system = require("../../config/system");
 module.exports.product = async (req, res)=>{  
     
     let statusFillter = statusHelper(req.query)
@@ -222,5 +223,43 @@ module.exports.editProduct = async (req, res) => {
         })
     } catch (error) {
       res.redirect(`${path.firstPath}/product`)  
+    }
+}
+module.exports.editAndUpdate = async (req, res)=>{
+    const id = req.params.id;
+    req.body.price = parseInt(req.body.price);
+    req.body.discountPercentage = parseInt(req.body.discountPercentage);
+    req.body.position = parseInt(req.body.position);
+    req.body.stock = parseInt(req.body.stock);
+    if (req.file){
+        req.body.thumbnail = `/uploads/${req.file.filename}`
+    }
+    console.log(req.body);
+    
+    try {
+        await ProductPage.updateOne({_id: id}, req.body);
+        req.flash("success", "chỉnh sửa thành công");
+        res.redirect("back")
+    } catch (error) {
+        req.flash("error", "chỉnh sửa thất bại");
+        res.redirect(`${system.firstPath}/product`)
+    }
+}
+
+module.exports.detail = async (req, res)=>{
+    const id = req.params.id
+    const find = {
+        deleted: false,
+        _id: id,
+        status: "active"
+    }
+    try {
+        const product = await ProductPage.findOne(find);
+        res.render("admin/pages/product/detail.pug", {
+            title: product.title,
+            product: product
+        })
+    } catch (error) {
+        req.flash("error", "truy cập thất bại")
     }
 }

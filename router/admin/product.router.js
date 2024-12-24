@@ -17,6 +17,8 @@ router.patch('/recycle/change-multi/:status/:id',controler.changeMultiRecycle);
 router.get('/create', controler.create);
 router.post('/create', upload.single('thumbnail'), validate.createValidate, controler.createProduct);
 router.get('/edit/:id', controler.editProduct);
+router.patch('/edit/:id', upload.single("thumbnail"), validate.createValidate ,controler.editAndUpdate);
+router.get('/detail/:id', controler.detail);
 
 
 module.exports = router;

@@ -10,5 +10,6 @@ router.get('/add', (req, res)=>{
 router.get('/delete', (req, res)=>{
     res.send("<h1>xóa trang sản phẩm</h1>")
 })
+router.get('/detail/:slug', controller.detail)
 
 module.exports = router;
