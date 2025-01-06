@@ -24,6 +24,6 @@ const productSchema = new mongoose.Schema({
     
 })
 
-const ProductPage = mongoose.model("ProductPage", productSchema, "product-pages");
+const ProductPage = mongoose.model("ProductPage", productSchema, "product-2");
 
 module.exports = ProductPage;

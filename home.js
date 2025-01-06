@@ -22,10 +22,10 @@ app.use(cookieParser(process.env.KEY));
 app.use(session({ cookie: { maxAge: 60000 }}));
 app.use(flash());
 
-app.set('views', './views');
+app.set('views', `${__dirname}/views`);
 app.set('view engine', 'pug');
 
-app.use(express.static("public"));
+app.use(express.static(`${__dirname}/public`));
 
 app.locals.variableAll = systemLocal.firstPath;
 
